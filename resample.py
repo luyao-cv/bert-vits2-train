@@ -12,6 +12,8 @@ from config import config
 def process(item):
     spkdir, wav_name, args = item
     wav_path = os.path.join(args.in_dir, spkdir, wav_name)
+    # import pdb
+    # pdb.set_trace()
     if os.path.exists(wav_path) and ".wav" in wav_path:
         wav, sr = librosa.load(wav_path, sr=args.sr)
         soundfile.write(os.path.join(args.out_dir, spkdir, wav_name), wav, sr)
@@ -52,7 +54,8 @@ if __name__ == "__main__":
     pool = Pool(processes=processes)
 
     tasks = []
-
+    # import pdb
+    # pdb.set_trace()
     for dirpath, _, filenames in os.walk(args.in_dir):
         # 子级目录
         spk_dir = os.path.relpath(dirpath, args.in_dir)

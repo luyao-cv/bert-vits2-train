@@ -1,0 +1,147 @@
+./dataset/luyao/luyao_51.wav|luyao|ZH|具有科普性和|_ j v y ou k e p u x ing h e _|0 4 4 3 3 1 1 3 3 4 4 2 2 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_132.wav|luyao|ZH|包含动物,植物,古生物,宇宙,自然,生活,身体,习惯,安全,文化|_ b ao h an d ong w u , zh ir w u , g u sh eng w u , y v zh ou , z i0 r an , sh eng h uo , sh en t i , x i g uan , AA an q van , w en h ua _|0 1 1 2 2 4 4 4 4 0 2 2 4 4 0 3 3 1 1 4 4 0 3 3 4 4 0 4 4 2 2 0 1 1 2 2 0 1 1 3 3 0 2 2 4 4 0 1 1 2 2 0 2 2 4 4 0|1 2 2 2 2 1 2 2 1 2 2 2 1 2 2 1 2 2 1 2 2 1 2 2 1 2 2 1 2 2 1 2 2 1
+./dataset/luyao/luyao_92.wav|luyao|ZH|和有意义的教育价值的问题|_ h e y ou y i y i d e j iao y v j ia zh ir d e w en t i _|0 2 2 3 3 4 4 4 4 5 5 4 4 4 4 4 4 2 2 5 5 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_53.wav|luyao|ZH|从科普知识到生活习惯|_ c ong k e p u zh ir sh ir d ao sh eng h uo x i g uan _|0 2 2 1 1 3 3 1 1 5 5 4 4 1 1 2 2 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_90.wav|luyao|ZH|得到个|_ d e d ao g e _|0 2 2 4 4 5 5 0|1 2 2 2 1
+./dataset/luyao/luyao_29.wav|luyao|ZH|统计知乎自然科学|_ t ong j i zh ir h u z i0 r an k e x ve _|0 3 3 4 4 1 1 1 1 4 4 2 2 1 1 2 2 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_98.wav|luyao|ZH|和少年儿童出版社正式发布了知乎|_ h e sh ao n ian EE er t ong ch u b an sh e zh eng sh ir f a b u l e zh ir h u _|0 2 2 4 4 2 2 2 2 2 2 1 1 3 3 4 4 4 4 4 4 1 1 4 4 5 5 1 1 1 1 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_123.wav|luyao|ZH|再通过线上征集和幼儿园教育机构的实地走访|_ z ai t ong g uo x ian sh ang zh eng j i h e y ou EE er y van j iao y v j i g ou d e sh ir d i z ou f ang _|0 4 4 1 1 4 4 4 4 4 4 1 1 2 2 2 2 4 4 2 2 2 2 4 4 4 4 1 1 4 4 5 5 2 2 5 5 2 2 3 3 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_54.wav|luyao|ZH|似乎百十万个为什么帮助孩子建立对世界的认知|_ s i0 h u b ai sh ir w an g e w ei sh en m e b ang zh u h ai z i0 j ian l i d ui sh ir j ie d e r en zh ir _|0 4 4 1 1 3 3 2 2 4 4 5 5 4 4 2 2 5 5 1 1 4 4 2 2 5 5 4 4 4 4 4 4 4 4 4 4 5 5 4 4 1 1 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_58.wav|luyao|ZH|十万个为什么的回答|_ sh ir w an g e w ei sh en m e d e h ui d a _|0 2 2 4 4 5 5 4 4 2 2 5 5 5 5 2 2 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_1.wav|luyao|ZH|面向儿童进行专业性|_ m ian x iang EE er t ong j in x ing zh uan y E x ing _|0 4 4 4 4 2 2 2 2 4 4 2 2 1 1 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_87.wav|luyao|ZH|那这句话|_ n a zh e j v h ua _|0 4 4 4 4 4 4 4 4 0|1 2 2 2 2 1
+./dataset/luyao/luyao_129.wav|luyao|ZH|品牌主张知乎服务于所有好奇心的人|_ p in p ai zh u zh ang zh ir h u f u w u y v s uo y ou h ao q i x in d e r en _|0 3 3 2 2 3 3 1 1 1 1 1 1 2 2 4 4 2 2 2 2 3 3 4 4 2 2 1 1 5 5 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_140.wav|luyao|ZH|但随著时代的发展而同时|_ d an s ui zh u sh ir d ai d e f a zh an EE er t ong sh ir _|0 4 4 2 2 4 4 2 2 4 4 5 5 1 1 3 3 2 2 2 2 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_6.wav|luyao|ZH|这首诗非常形象地表现了李白|_ zh e sh ou sh ir f ei ch ang x ing x iang d i b iao x ian l e l i b ai _|0 4 4 3 3 1 1 1 1 2 2 2 2 4 4 5 5 3 3 4 4 5 5 3 3 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_144.wav|luyao|ZH|儿童对于科学问题的无限想象进一步的放大|_ EE er t ong d ui y v k e x ve w en t i d e w u x ian x iang x iang j in y i b u d e f ang d a _|0 2 2 2 2 4 4 2 2 1 1 2 2 4 4 2 2 5 5 2 2 4 4 3 3 4 4 4 4 2 2 4 4 5 5 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_18.wav|luyao|ZH|趣味性的科普|_ q v w ei x ing d e k e p u _|0 4 4 4 4 4 4 5 5 1 1 3 3 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_68.wav|luyao|ZH|儿童教育领域权威专家|_ EE er t ong j iao y v l ing y v q van w ei zh uan j ia _|0 2 2 2 2 4 4 4 4 3 3 4 4 2 2 1 1 1 1 1 1 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_97.wav|luyao|ZH|以及问答的形式|_ y i j i w en d a d e x ing sh ir _|0 3 3 2 2 4 4 2 2 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_25.wav|luyao|ZH|我们来讲一段艺文|_ w o m en l ai j iang y i d uan y i w en _|0 3 3 5 5 2 2 3 3 2 2 4 4 4 4 2 2 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_44.wav|luyao|ZH|'池湖版十万个为什么'绘本的问世则是对前者的一切|_ ' ch ir h u b an sh ir w an g e w ei sh en m e ' h ui b en d e w en sh ir z e sh ir d ui q ian zh e d e y i q ie _|0 0 2 2 2 2 3 3 2 2 4 4 5 5 4 4 2 2 5 5 0 4 4 3 3 5 5 4 4 4 4 2 2 4 4 4 4 2 2 3 3 5 5 2 2 4 4 0|1 1 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_59.wav|luyao|ZH|用不同学科的专业视觉回答同一个问题|_ y ong b u t ong x ve k e d e zh uan y E sh ir j ve h ui d a t ong y i g e w en t i _|0 4 4 4 4 2 2 2 2 1 1 5 5 1 1 4 4 4 4 2 2 2 2 2 2 2 2 2 2 5 5 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_114.wav|luyao|ZH|国内年轻的父母和儿童|_ g uo n ei n ian q ing d e f u m u h e EE er t ong _|0 2 2 4 4 2 2 1 1 5 5 4 4 3 3 2 2 2 2 2 2 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_34.wav|luyao|ZH|平夫子成夫子|_ p ing f u z i0 ch eng f u z i0 _|0 2 2 1 1 5 5 2 2 1 1 5 5 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_135.wav|luyao|ZH|这个字羊仔什么牛|_ zh e g e z i0 y ang z ai sh en m e n iu _|0 4 4 5 5 4 4 2 2 3 3 2 2 5 5 2 2 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_13.wav|luyao|ZH|科普绘本是知乎在全占科普内容基础之上的|_ k e p u h ui b en sh ir zh ir h u z ai q van zh an k e p u n ei r ong j i ch u zh ir sh ang d e _|0 1 1 3 3 4 4 3 3 4 4 1 1 1 1 4 4 2 2 4 4 1 1 3 3 4 4 2 2 1 1 3 3 1 1 5 5 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_80.wav|luyao|ZH|在几乎把十万个为什么中有异性|_ z ai j i h u b a sh ir w an g e w ei sh en m e zh ong y ou y i x ing _|0 4 4 1 1 1 1 3 3 2 2 4 4 5 5 4 4 2 2 5 5 1 1 3 3 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_24.wav|luyao|ZH|好这是第一段|_ h ao zh e sh ir d i y i d uan _|0 3 3 4 4 4 4 4 4 1 1 4 4 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_37.wav|luyao|ZH|当下的儿童科普教育市场上缺少了能够|_ d ang x ia d e EE er t ong k e p u j iao y v sh ir ch ang sh ang q ve sh ao l e n eng g ou _|0 1 1 4 4 5 5 2 2 2 2 1 1 3 3 4 4 4 4 4 4 3 3 4 4 1 1 3 3 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_38.wav|luyao|ZH|能够深入人心的国内|_ n eng g ou sh en r u r en x in d e g uo n ei _|0 2 2 4 4 1 1 4 4 2 2 1 1 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_82.wav|luyao|ZH|.|_ . _|0 0 0|1 1 1
+./dataset/luyao/luyao_134.wav|luyao|ZH|纵情享乐之情的豪迈奔放|_ z ong q ing x iang l e zh ir q ing d e h ao m ai b en f ang _|0 4 4 2 2 3 3 4 4 1 1 2 2 5 5 2 2 4 4 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_88.wav|luyao|ZH|科本,教育内容,此外|_ k e b en , j iao y v n ei r ong , c i0 w ai _|0 1 1 3 3 0 4 4 4 4 4 4 2 2 0 3 3 4 4 0|1 2 2 1 2 2 2 2 1 2 2 1
+./dataset/luyao/luyao_41.wav|luyao|ZH|新一代儿童的新问题|_ x in y i d ai EE er t ong d e x in w en t i _|0 1 1 2 2 4 4 2 2 2 2 5 5 1 1 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_77.wav|luyao|ZH|莫使精尊空对悦天生我才必有用千金散尽还复来|_ m o sh ir j ing z un k ong d ui y ve t ian sh eng w o c ai b i y ou y ong q ian j in s an j in h ai f u l ai _|0 4 4 3 3 1 1 1 1 1 1 4 4 4 4 1 1 1 1 3 3 2 2 4 4 3 3 4 4 1 1 1 1 4 4 3 3 2 2 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_110.wav|luyao|ZH|好奇的新问题以及专业性的科学问答|_ h ao q i d e x in w en t i y i j i zh uan y E x ing d e k e x ve w en d a _|0 4 4 2 2 5 5 1 1 4 4 2 2 3 3 2 2 1 1 4 4 4 4 5 5 1 1 2 2 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_138.wav|luyao|ZH|不言流畅,具有|_ b u y En l iu ch ang , j v y ou _|0 4 4 2 2 2 2 4 4 0 4 4 3 3 0|1 2 2 2 2 1 2 2 1
+./dataset/luyao/luyao_7.wav|luyao|ZH|傲不殉的性格|_ AA ao b u x vn d e x ing g e _|0 4 4 2 2 4 4 5 5 4 4 2 2 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_32.wav|luyao|ZH|如太阳公公在哪里躲雨呢?|_ r u t ai y ang g ong g ong z ai n a l i d uo y v n e ? _|0 2 2 4 4 5 5 1 1 5 5 4 4 2 2 3 3 2 2 3 3 5 5 0 0|1 2 2 2 2 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_55.wav|luyao|ZH|跨越时代的升级立足于新一代儿童的新问题|_ k ua y ve sh ir d ai d e sh eng j i l i z u y v x in y i d ai EE er t ong d e x in w en t i _|0 4 4 4 4 2 2 4 4 5 5 1 1 2 2 4 4 2 2 2 2 1 1 2 2 4 4 2 2 2 2 5 5 1 1 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_39.wav|luyao|ZH|昌敬酒及其代表作|_ ch ang j ing j iu j i q i d ai b iao z uo _|0 1 1 4 4 3 3 2 2 2 2 4 4 3 3 4 4 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_111.wav|luyao|ZH|十万个|_ sh ir w an g e _|0 2 2 4 4 5 5 0|1 2 2 2 1
+./dataset/luyao/luyao_126.wav|luyao|ZH|呼高自傲的表达方式|_ h u g ao z i0 AA ao d e b iao d a f ang sh ir _|0 1 1 1 1 4 4 4 4 5 5 3 3 2 2 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_142.wav|luyao|ZH|来讲一篇知乎版十万个为什么绘本回答|_ l ai j iang y i p ian zh ir h u b an sh ir w an g e w ei sh en m e h ui b en h ui d a _|0 2 2 3 3 4 4 1 1 1 1 1 1 3 3 2 2 4 4 5 5 4 4 2 2 5 5 4 4 3 3 2 2 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_78.wav|luyao|ZH|千金球忽而腔出幻眉咎|_ q ian j in q iu h u EE er q iang ch u h uan m ei j iu _|0 1 1 1 1 2 2 1 1 2 2 1 1 1 1 4 4 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_65.wav|luyao|ZH|能够从科学中|_ n eng g ou c ong k e x ve zh ong _|0 2 2 4 4 2 2 1 1 2 2 1 1 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_125.wav|luyao|ZH|.|_ . _|0 0 0|1 1 1
+./dataset/luyao/luyao_35.wav|luyao|ZH|十大科学主题|_ sh ir d a k e x ve zh u t i _|0 2 2 4 4 1 1 2 2 3 3 2 2 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_10.wav|luyao|ZH|科普内容共积累了超过三,零万人的关注|_ k e p u n ei r ong g ong j i l ei l e ch ao g uo s an , l ing w an r en d e g uan zh u _|0 1 1 3 3 4 4 2 2 4 4 1 1 3 3 5 5 1 1 4 4 1 1 0 2 2 4 4 2 2 5 5 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_20.wav|luyao|ZH|礼拜借题发挥|_ l i b ai j ie t i f a h ui _|0 3 3 4 4 4 4 2 2 1 1 1 1 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_128.wav|luyao|ZH|流露出了它|_ l iu l u ch u l e t a _|0 2 2 4 4 1 1 5 5 1 1 0|1 2 2 2 2 2 1
+./dataset/luyao/luyao_48.wav|luyao|ZH|在高度|_ z ai g ao d u _|0 4 4 1 1 4 4 0|1 2 2 2 1
+./dataset/luyao/luyao_107.wav|luyao|ZH|不见黄河之水天上来|_ b u j ian h uang h e zh ir sh ui t ian sh ang l ai _|0 2 2 4 4 2 2 2 2 1 1 3 3 1 1 5 5 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_75.wav|luyao|ZH|都为优秀创作者对内容的反复打磨|_ d ou w ei y ou x iu ch uang z uo zh e d ui n ei r ong d e f an f u d a m o _|0 1 1 4 4 1 1 4 4 4 4 4 4 3 3 4 4 4 4 2 2 5 5 3 3 4 4 3 3 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_95.wav|luyao|ZH|从儿童的视觉和语言出发|_ c ong EE er t ong d e sh ir j ve h e y v y En ch u f a _|0 2 2 2 2 2 2 5 5 4 4 2 2 2 2 3 3 2 2 1 1 1 1 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_74.wav|luyao|ZH|不特的观察与思考|_ b u t e d e g uan ch a y v s i0 k ao _|0 2 2 4 4 5 5 1 1 2 2 3 3 1 1 3 3 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_146.wav|luyao|ZH|为什么出版六十周年|_ w ei sh en m e ch u b an l iu sh ir zh ou n ian _|0 4 4 2 2 5 5 1 1 3 3 4 4 2 2 1 1 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_94.wav|luyao|ZH|会本共分为了十个册子|_ h ui b en g ong f en w ei l e sh ir g e c e z i0 _|0 4 4 3 3 4 4 1 1 2 2 5 5 2 2 5 5 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_0.wav|luyao|ZH|'十万个为什么'科普惠本|_ ' sh ir w an g e w ei sh en m e ' k e p u h ui b en _|0 0 2 2 4 4 5 5 4 4 2 2 5 5 0 1 1 3 3 4 4 3 3 0|1 1 2 2 2 2 2 2 1 2 2 2 2 1
+./dataset/luyao/luyao_115.wav|luyao|ZH|进行儿童科普同时教育|_ j in x ing EE er t ong k e p u t ong sh ir j iao y v _|0 4 4 2 2 2 2 2 2 1 1 3 3 2 2 2 2 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_105.wav|luyao|ZH|于十月十一日在多个渠道正式发售|_ y v sh ir y ve sh ir y i r ir z ai d uo g e q v d ao zh eng sh ir f a sh ou _|0 2 2 2 2 4 4 2 2 2 2 4 4 4 4 1 1 5 5 2 2 4 4 4 4 4 4 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_60.wav|luyao|ZH|我知乎来自|_ w o zh ir h u l ai z i0 _|0 3 3 1 1 1 1 2 2 4 4 0|1 2 2 2 2 2 1
+./dataset/luyao/luyao_122.wav|luyao|ZH|奔流到海不复回,君不见高堂明镜悲白发.|_ b en l iu d ao h ai b u f u h ui , j vn b u j ian g ao t ang m ing j ing b ei b ai f a . _|0 1 1 2 2 4 4 3 3 2 2 4 4 2 2 0 1 1 5 5 4 4 1 1 2 2 2 2 4 4 1 1 2 2 4 4 0 0|1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_103.wav|luyao|ZH|为什么知乎版是知乎出版页|_ w ei sh en m e zh ir h u b an sh ir zh ir h u ch u b an y E _|0 4 4 2 2 5 5 1 1 1 1 3 3 4 4 1 1 1 1 1 1 3 3 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_66.wav|luyao|ZH|获得请问答案|_ h uo d e q ing w en d a AA an _|0 4 4 5 5 3 3 4 4 2 2 4 4 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_70.wav|luyao|ZH|是怎么吃饭的呢这些|_ sh ir z en m e ch ir f an d e n e zh e x ie _|0 4 4 3 3 5 5 1 1 4 4 5 5 5 5 4 4 1 1 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_64.wav|luyao|ZH|普通式教育|_ p u t ong sh ir j iao y v _|0 3 3 1 1 4 4 4 4 4 4 0|1 2 2 2 2 2 1
+./dataset/luyao/luyao_71.wav|luyao|ZH|这些问题是很重要的|_ zh e x ie w en t i sh ir h en zh ong y ao d e _|0 4 4 1 1 4 4 2 2 4 4 3 3 4 4 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_143.wav|luyao|ZH|最前沿的科学发现与知识成果|_ z ui q ian y En d e k e x ve f a x ian y v zh ir sh ir ch eng g uo _|0 4 4 2 2 2 2 5 5 1 1 2 2 1 1 4 4 3 3 1 1 5 5 2 2 3 3 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_22.wav|luyao|ZH|比如为什么扫地机器人不会迷路呢|_ b i r u w ei sh en m e s ao d i j i q i r en b u h ui m i l u n e _|0 3 3 2 2 4 4 2 2 5 5 3 3 5 5 1 1 4 4 2 2 2 2 4 4 2 2 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_42.wav|luyao|ZH|十月十一日|_ sh ir y ve sh ir y i r ir _|0 2 2 4 4 2 2 2 2 4 4 0|1 2 2 2 2 2 1
+./dataset/luyao/luyao_23.wav|luyao|ZH|宇宙飞船的电能是|_ y v zh ou f ei ch uan d e d ian n eng sh ir _|0 3 3 4 4 1 1 2 2 5 5 4 4 2 2 4 4 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_4.wav|luyao|ZH|金须姑娶对君主五马花五五花马|_ j in x v g u q v d ui j vn zh u w u m a h ua w u w u h ua m a _|0 1 1 1 1 1 1 3 3 4 4 1 1 3 3 2 2 3 3 1 1 3 3 3 3 1 1 3 3 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_131.wav|luyao|ZH|围绕了十大科学性主题|_ w ei r ao l e sh ir d a k e x ve x ing zh u t i _|0 2 2 4 4 5 5 2 2 4 4 1 1 2 2 4 4 3 3 2 2 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_62.wav|luyao|ZH|李白永久的诗篇即能表现他的个性|_ l i b ai y ong j iu d e sh ir p ian j i n eng b iao x ian t a d e g e x ing _|0 3 3 2 2 2 2 3 3 5 5 1 1 1 1 2 2 2 2 3 3 4 4 1 1 5 5 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_120.wav|luyao|ZH|是知乎的|_ sh ir zh ir h u d e _|0 4 4 1 1 1 1 5 5 0|1 2 2 2 2 1
+./dataset/luyao/luyao_141.wav|luyao|ZH|对未知的好奇也随之更迭|_ d ui w ei zh ir d e h ao q i y E s ui zh ir g eng d ie _|0 4 4 4 4 1 1 5 5 4 4 2 2 3 3 2 2 1 1 1 1 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_11.wav|luyao|ZH|黄安放还以后的所作诗词,思想内容更为深层,艺术表现更为成熟.|_ h uang AA an f ang h ai y i h ou d e s uo z uo sh ir c i0 , s i0 x iang n ei r ong g eng w ei sh en c eng , y i sh u b iao x ian g eng w ei ch eng sh u . _|0 2 2 1 1 4 4 2 2 3 3 4 4 5 5 3 3 4 4 1 1 2 2 0 1 1 3 3 4 4 2 2 4 4 2 2 1 1 2 2 0 4 4 4 4 3 3 4 4 4 4 2 2 2 2 2 2 0 0|1 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_113.wav|luyao|ZH|在消费升级的大趋势下|_ z ai x iao f ei sh eng j i d e d a q v sh ir x ia _|0 4 4 1 1 4 4 1 1 2 2 5 5 4 4 1 1 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_14.wav|luyao|ZH|对儿童科部细分领域的一次|_ d ui EE er t ong k e b u x i f en l ing y v d e y i c i0 _|0 4 4 2 2 2 2 1 1 4 4 4 4 1 1 3 3 4 4 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_133.wav|luyao|ZH|您感多是来源于知乎上的优质儿童科目内容?|_ n in g an d uo sh ir l ai y van y v zh ir h u sh ang d e y ou zh ir EE er t ong k e m u n ei r ong ? _|0 2 2 3 3 1 1 4 4 2 2 2 2 2 2 1 1 1 1 4 4 5 5 1 1 4 4 2 2 2 2 1 1 4 4 4 4 2 2 0 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_8.wav|luyao|ZH|一方面呢是对自己充满自信|_ y i f ang m ian n e sh ir d ui z i0 j i ch ong m an z i0 x in _|0 4 4 1 1 4 4 5 5 4 4 4 4 4 4 3 3 1 1 3 3 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_2.wav|luyao|ZH|或且需要能够有满足新一代儿童|_ h uo q ie x v y ao n eng g ou y ou m an z u x in y i d ai EE er t ong _|0 4 4 3 3 1 1 4 4 2 2 4 4 2 2 3 3 2 2 1 1 2 2 4 4 2 2 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_21.wav|luyao|ZH|借酒浇愁|_ j ie j iu j iao ch ou _|0 4 4 3 3 1 1 2 2 0|1 2 2 2 2 1
+./dataset/luyao/luyao_108.wav|luyao|ZH|'少年儿童出版社'出版的十万个为什么|_ ' sh ao n ian EE er t ong ch u b an sh e ' ch u b an d e sh ir w an g e w ei sh en m e _|0 0 4 4 2 2 2 2 2 2 1 1 3 3 4 4 0 1 1 3 3 5 5 2 2 4 4 5 5 4 4 2 2 5 5 0|1 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_118.wav|luyao|ZH|并产生了正确的引导|_ b ing ch an sh eng l e zh eng q ve d e y in d ao _|0 4 4 3 3 1 1 5 5 4 4 4 4 5 5 2 2 3 3 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_43.wav|luyao|ZH|我们知乎宣布年和年结束.|_ w o m en zh ir h u x van b u n ian h e n ian j ie sh u . _|0 3 3 5 5 1 1 1 1 1 1 4 4 2 2 2 2 2 2 2 2 4 4 0 0|1 2 2 2 2 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_63.wav|luyao|ZH|这类诗固然属于长安放|_ zh e l ei sh ir g u r an sh u y v ch ang AA an f ang _|0 4 4 4 4 1 1 4 4 2 2 3 3 2 2 2 2 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_36.wav|luyao|ZH|似乎打造了新时代儿童科部教材|_ s i0 h u d a z ao l e x in sh ir d ai EE er t ong k e b u j iao c ai _|0 4 4 1 1 3 3 4 4 5 5 1 1 2 2 4 4 2 2 2 2 1 1 4 4 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_46.wav|luyao|ZH|朝如青丝暮成雪,人生得意须尽欢.|_ ch ao r u q ing s i0 m u ch eng x ve , r en sh eng d e y i x v j in h uan . _|0 2 2 2 2 1 1 1 1 4 4 2 2 3 3 0 2 2 1 1 2 2 4 4 1 1 4 4 1 1 0 0|1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_96.wav|luyao|ZH|融合了当今中国社会时代发展的特色|_ r ong h e l e d ang j in zh ong g uo sh e h ui sh ir d ai f a zh an d e t e s e _|0 2 2 2 2 5 5 1 1 1 1 1 1 2 2 4 4 4 4 2 2 4 4 1 1 3 3 5 5 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_86.wav|luyao|ZH|鱼儿藤霄万古愁|_ y v EE er t eng x iao w an g u ch ou _|0 2 2 2 2 2 2 1 1 4 4 3 3 2 2 0|1 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_104.wav|luyao|ZH|出版业务推进推出的首部儿童科补绘本|_ ch u b an y E w u t ui j in t ui ch u d e sh ou b u EE er t ong k e b u h ui b en _|0 1 1 3 3 4 4 4 4 1 1 4 4 1 1 1 1 5 5 3 3 4 4 2 2 2 2 1 1 3 3 4 4 3 3 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_99.wav|luyao|ZH|打造逐步往上出了最适合国内当代儿童的|_ d a z ao zh u b u w ang sh ang ch u l e z ui sh ir h e g uo n ei d ang d ai EE er t ong d e _|0 3 3 4 4 2 2 4 4 3 3 4 4 1 1 5 5 4 4 4 4 2 2 2 2 4 4 1 1 4 4 2 2 2 2 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_130.wav|luyao|ZH|小朋友则是最大的好奇|_ x iao p eng y ou z e sh ir z ui d a d e h ao q i _|0 3 3 2 2 5 5 2 2 4 4 4 4 4 4 5 5 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_17.wav|luyao|ZH|古来圣贤皆寂寞,唯有嬴儿,嬴者留其名.|_ g u l ai sh eng x ian j ie j i m o , w ei y ou y ing EE er , y ing zh e l iu q i m ing . _|0 3 3 2 2 4 4 2 2 1 1 4 4 4 4 0 2 2 3 3 2 2 2 2 0 2 2 3 3 2 2 2 2 2 2 0 0|1 2 2 2 2 2 2 2 1 2 2 2 2 1 2 2 2 2 2 1 1
+./dataset/luyao/luyao_137.wav|luyao|ZH|一首诗词,|_ y i sh ou sh ir c i0 , _|0 4 4 3 3 1 1 2 2 0 0|1 2 2 2 2 1 1
+./dataset/luyao/luyao_27.wav|luyao|ZH|进行了创作|_ j in x ing l e ch uang z uo _|0 4 4 2 2 5 5 4 4 4 4 0|1 2 2 2 2 2 1
+./dataset/luyao/luyao_31.wav|luyao|ZH|也有属于孩子们天骂行婚的问题|_ y E y ou sh u y v h ai z i0 m en t ian m a x ing h un d e w en t i _|0 2 2 3 3 3 3 2 2 2 2 5 5 5 5 1 1 4 4 2 2 1 1 5 5 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_139.wav|luyao|ZH|很强的感染力|_ h en q iang d e g an r an l i _|0 3 3 2 2 5 5 2 2 3 3 4 4 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_56.wav|luyao|ZH|仰赖科普内容的亲子儿童领域|_ y ang l ai k e p u n ei r ong d e q in z i0 EE er t ong l ing y v _|0 3 3 4 4 1 1 3 3 4 4 2 2 5 5 1 1 5 5 2 2 2 2 3 3 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_112.wav|luyao|ZH|内容大多是泳,唱,饮酒,放歌之事在这首里|_ n ei r ong d a d uo sh ir y ong , ch ang , y in j iu , f ang g e zh ir sh ir z ai zh e sh ou l i _|0 4 4 2 2 4 4 1 1 4 4 3 3 0 4 4 0 2 2 3 3 0 4 4 1 1 1 1 4 4 4 4 4 4 2 2 3 3 0|1 2 2 2 2 2 2 1 2 1 2 2 1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_45.wav|luyao|ZH|给出科学解答|_ g ei ch u k e x ve j ie d a _|0 3 3 1 1 1 1 2 2 3 3 2 2 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_15.wav|luyao|ZH|与君歌一曲,请君为我倾耳听.|_ y v j vn g e y i q v , q ing j vn w ei w o q ing EE er t ing . _|0 3 3 1 1 1 1 4 4 1 1 0 3 3 1 1 4 4 3 3 1 1 3 3 1 1 0 0|1 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_119.wav|luyao|ZH|有问题就会回答|_ y ou w en t i j iu h ui h ui d a _|0 3 3 4 4 2 2 4 4 4 4 2 2 2 2 0|1 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_33.wav|luyao|ZH|谢伟乐汇须一饮三百杯|_ x ie w ei l e h ui x v y i y in s an b ai b ei _|0 4 4 3 3 4 4 4 4 1 1 4 4 3 3 1 1 3 3 1 1 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_85.wav|luyao|ZH|似乎各领域优秀创作者|_ s i0 h u g e l ing y v y ou x iu ch uang z uo zh e _|0 4 4 1 1 4 4 3 3 4 4 1 1 4 4 4 4 4 4 3 3 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_81.wav|luyao|ZH|一些只有出生在数字时代的孩子才会|_ y i x ie zh ir y ou ch u sh eng z ai sh u z i0 sh ir d ai d e h ai z i0 c ai h ui _|0 4 4 1 1 2 2 3 3 1 1 1 1 4 4 4 4 4 4 2 2 4 4 5 5 2 2 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_124.wav|luyao|ZH|作为中文互联网在线问答社区科学科技一直是知乎社区的基石领域|_ z uo w ei zh ong w en h u l ian w ang z ai x ian w en d a sh e q v k e x ve k e j i y i zh ir sh ir zh ir h u sh e q v d e j i sh ir l ing y v _|0 4 4 2 2 1 1 2 2 4 4 2 2 3 3 4 4 4 4 4 4 2 2 4 4 1 1 1 1 2 2 1 1 4 4 4 4 2 2 4 4 1 1 1 1 4 4 1 1 5 5 1 1 2 2 3 3 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_5.wav|luyao|ZH|触发自己的粪鸡情绪|_ ch u f a z i0 j i d e f en j i q ing x v _|0 4 4 1 1 4 4 3 3 5 5 4 4 1 1 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_145.wav|luyao|ZH|明年正值少年儿童出版社十万个|_ m ing n ian zh eng zh ir sh ao n ian EE er t ong ch u b an sh e sh ir w an g e _|0 2 2 2 2 4 4 2 2 4 4 2 2 2 2 2 2 1 1 3 3 4 4 2 2 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_93.wav|luyao|ZH|收入了八百个|_ sh ou r u l e b a b ai g e _|0 1 1 4 4 5 5 1 1 3 3 5 5 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_109.wav|luyao|ZH|是大众熟悉的经典品牌|_ sh ir d a zh ong sh u x i d e j ing d ian p in p ai _|0 4 4 4 4 4 4 2 2 5 5 5 5 1 1 3 3 3 3 2 2 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_84.wav|luyao|ZH|儿童文学作家护航|_ EE er t ong w en x ve z uo j ia h u h ang _|0 2 2 2 2 2 2 2 2 4 4 1 1 4 4 2 2 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_83.wav|luyao|ZH|丹秋生江靖久碑莫庭|_ d an q iu sh eng j iang j ing j iu b ei m o t ing _|0 1 1 1 1 1 1 1 1 4 4 3 3 1 1 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_50.wav|luyao|ZH|大部分孩子他的真正的好奇心来自|_ d a b u f en h ai z i0 t a d e zh en zh eng d e h ao q i x in l ai z i0 _|0 4 4 4 4 5 5 2 2 5 5 1 1 5 5 1 1 4 4 5 5 4 4 2 2 1 1 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_69.wav|luyao|ZH|太阳大象的牙齿在外面|_ t ai y ang d a x iang d e y a ch ir z ai w ai m ian _|0 4 4 5 5 4 4 4 4 5 5 2 2 3 3 4 4 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_76.wav|luyao|ZH|和经典科部十万个位什么的|_ h e j ing d ian k e b u sh ir w an g e w ei sh en m e d e _|0 2 2 1 1 3 3 1 1 4 4 2 2 4 4 5 5 4 4 2 2 5 5 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_102.wav|luyao|ZH|还融入了一定的知乎特色|_ h ai r ong r u l e y i d ing d e zh ir h u t e s e _|0 2 2 2 2 4 4 5 5 2 2 4 4 5 5 1 1 1 1 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_106.wav|luyao|ZH|将敬酒君不见|_ j iang j ing j iu j vn b u j ian _|0 1 1 4 4 3 3 1 1 5 5 4 4 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_72.wav|luyao|ZH|孩子们的天赋|_ h ai z i0 m en d e t ian f u _|0 2 2 5 5 5 5 5 5 1 1 4 4 0|1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_19.wav|luyao|ZH|赏悉枪敬酒是唐代以前乐谱歌曲的一个题目|_ sh ang x i q iang j ing j iu sh ir t ang d ai y i q ian y ve p u g e q v d e y i g e t i m u _|0 3 3 1 1 1 1 4 4 3 3 4 4 2 2 4 4 3 3 2 2 4 4 3 3 1 1 3 3 5 5 2 2 5 5 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_121.wav|luyao|ZH|这段少文我们来讲一下它的一个|_ zh e d uan sh ao w en w o m en l ai j iang y i x ia t a d e y i g e _|0 4 4 4 4 3 3 2 2 3 3 5 5 2 2 3 3 2 2 4 4 1 1 5 5 2 2 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_9.wav|luyao|ZH|科技两大及时领域|_ k e j i l iang d a j i sh ir l ing y v _|0 1 1 4 4 3 3 4 4 2 2 2 2 3 3 4 4 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_30.wav|luyao|ZH|为什么绘本中的问题|_ w ei sh en m e h ui b en zh ong d e w en t i _|0 4 4 2 2 5 5 4 4 3 3 1 1 5 5 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_116.wav|luyao|ZH|激发并满足了儿童对科学内容的阅读兴趣|_ j i f a b ing m an z u l e EE er t ong d ui k e x ve n ei r ong d e y ve d u x ing q v _|0 1 1 1 1 4 4 3 3 2 2 5 5 2 2 2 2 4 4 1 1 2 2 4 4 2 2 5 5 4 4 2 2 4 4 4 4 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_26.wav|luyao|ZH|内容挖掘和尝试|_ n ei r ong w a j ve h e ch ang sh ir _|0 4 4 2 2 1 1 2 2 2 2 2 2 4 4 0|1 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_57.wav|luyao|ZH|共积累了超过了二万六千条|_ g ong j i l ei l e ch ao g uo l e EE er w an l iu q ian t iao _|0 4 4 1 1 3 3 5 5 1 1 4 4 5 5 4 4 4 4 4 4 1 1 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_49.wav|luyao|ZH|物理学,化学,生物学,动植物学,儿童心理等多个领域的|_ w u l i x ve , h ua x ve , sh eng w u x ve , d ong zh ir w u x ve , EE er t ong x in l i d eng d uo g e l ing y v d e _|0 4 4 3 3 2 2 0 4 4 2 2 0 1 1 4 4 2 2 0 4 4 2 2 4 4 2 2 0 2 2 2 2 1 1 3 3 3 3 1 1 5 5 3 3 4 4 5 5 0|1 2 2 2 1 2 2 1 2 2 2 1 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_100.wav|luyao|ZH|陈王吸食,宴品乐,斗酒十千支戏略,主人何为言少谦.|_ ch en w ang x i sh ir , y En p in l e , d ou j iu sh ir q ian zh ir x i l ve , zh u r en h e w ei y En sh ao q ian . _|0 2 2 2 2 1 1 2 2 0 4 4 3 3 4 4 0 4 4 3 3 2 2 1 1 1 1 4 4 4 4 0 3 3 2 2 2 2 4 4 2 2 3 3 1 1 0 0|1 2 2 2 2 1 2 2 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_101.wav|luyao|ZH|儿童出版社正版的基础上呢|_ EE er t ong ch u b an sh e zh eng b an d e j i ch u sh ang n e _|0 2 2 2 2 1 1 3 3 4 4 4 4 3 3 5 5 1 1 3 3 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_28.wav|luyao|ZH|积累了海量科学和科普内容|_ j i l ei l e h ai l iang k e x ve h e k e p u n ei r ong _|0 1 1 3 3 5 5 3 3 4 4 1 1 2 2 2 2 1 1 3 3 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_40.wav|luyao|ZH|并经由顶级专家,学者和知乎优秀内容创作者的|_ b ing j ing y ou d ing j i zh uan j ia , x ve zh e h e zh ir h u y ou x iu n ei r ong ch uang z uo zh e d e _|0 4 4 1 1 2 2 3 3 2 2 1 1 1 1 0 2 2 3 3 2 2 1 1 1 1 1 1 4 4 4 4 2 2 4 4 4 4 3 3 5 5 0|1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_61.wav|luyao|ZH|仿佛打磨收入了大量新时代儿童下的|_ f ang f u d a m o sh ou r u l e d a l iang x in sh ir d ai EE er t ong x ia d e _|0 3 3 2 2 3 3 2 2 1 1 4 4 5 5 4 4 4 4 1 1 2 2 4 4 2 2 2 2 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_73.wav|luyao|ZH|体现了他们对于世界独立的信仰|_ t i x ian l e t a m en d ui y v sh ir j ie d u l i d e x in y ang _|0 3 3 4 4 5 5 1 1 5 5 4 4 2 2 4 4 4 4 2 2 4 4 5 5 4 4 3 3 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_79.wav|luyao|ZH|普世性,代表性的问题|_ p u sh ir x ing , d ai b iao x ing d e w en t i _|0 3 3 4 4 4 4 0 4 4 3 3 4 4 5 5 4 4 2 2 0|1 2 2 2 1 2 2 2 2 2 2 1
+./dataset/luyao/luyao_89.wav|luyao|ZH|在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢在汇丰时代呢|_ z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e z ai h ui f eng sh ir d ai n e _|0 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 4 4 4 4 1 1 2 2 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_91.wav|luyao|ZH|会本共收集摔险了二百个孩子提出的有趣性问题|_ h ui b en g ong sh ou j i sh uai x ian l e EE er b ai g e h ai z i0 t i ch u d e y ou q v x ing w en t i _|0 4 4 3 3 4 4 1 1 2 2 1 1 3 3 5 5 4 4 3 3 5 5 2 2 5 5 2 2 1 1 5 5 3 3 4 4 4 4 4 4 2 2 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_117.wav|luyao|ZH|满足了儿童好奇心|_ m an z u l e EE er t ong h ao q i x in _|0 3 3 2 2 5 5 2 2 2 2 4 4 2 2 1 1 0|1 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_12.wav|luyao|ZH|那么知乎版十万个为什么|_ n a m e zh ir h u b an sh ir w an g e w ei sh en m e _|0 4 4 5 5 1 1 1 1 3 3 2 2 4 4 5 5 4 4 2 2 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_136.wav|luyao|ZH|情绪|_ q ing x v _|0 2 2 4 4 0|1 2 2 1
+./dataset/luyao/luyao_3.wav|luyao|ZH|科普支持需求的新毒物|_ k e p u zh ir ch ir x v q iu d e x in d u w u _|0 1 1 3 3 1 1 2 2 1 1 2 2 5 5 1 1 2 2 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_16.wav|luyao|ZH|不赚欲不足贵,但愿成罪不愿醒.|_ b u zh uan y v b u z u g ui , d an y van ch eng z ui b u y van x ing . _|0 2 2 4 4 4 4 4 4 2 2 4 4 0 4 4 4 4 2 2 4 4 2 2 4 4 3 3 0 0|1 2 2 2 2 2 2 1 2 2 2 2 2 2 2 1 1
+./dataset/luyao/luyao_52.wav|luyao|ZH|从生活常识到冷门脑洞|_ c ong sh eng h uo ch ang sh ir d ao l eng m en n ao d ong _|0 2 2 1 1 2 2 2 2 2 2 4 4 3 3 2 2 3 3 4 4 0|1 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_127.wav|luyao|ZH|另外一方面是在政治前途出现波折后呢|_ l ing w ai y i f ang m ian sh ir z ai zh eng zh ir q ian t u ch u x ian b o zh e h ou n e _|0 4 4 4 4 4 4 1 1 4 4 4 4 4 4 4 4 4 4 2 2 2 2 1 1 4 4 1 1 2 2 4 4 5 5 0|1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_47.wav|luyao|ZH|日流量超过了六千万|_ r ir l iu l iang ch ao g uo l e l iu q ian w an _|0 4 4 2 2 4 4 1 1 4 4 5 5 4 4 1 1 4 4 0|1 2 2 2 2 2 2 2 2 2 1
+./dataset/luyao/luyao_67.wav|luyao|ZH|会本是由国内多位科学家|_ h ui b en sh ir y ou g uo n ei d uo w ei k e x ve j ia _|0 4 4 3 3 4 4 2 2 2 2 4 4 1 1 4 4 1 1 2 2 1 1 0|1 2 2 2 2 2 2 2 2 2 2 2 1

@@ -8,6 +8,8 @@ from config import config
 
 LOCAL_PATH = "./bert/deberta-v3-large"
 
+# import pdb
+# pdb.set_trace()
 tokenizer = DebertaV2Tokenizer.from_pretrained(LOCAL_PATH)
 
 models = dict()

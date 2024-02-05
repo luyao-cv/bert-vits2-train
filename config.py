@@ -143,7 +143,7 @@ class Webui_config:
         model: str,
         config_path: str,
         language_identification_library: str,
-        port: int = 7860,
+        port: int = 8915,
         share: bool = False,
         debug: bool = False,
     ):

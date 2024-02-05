@@ -445,5 +445,5 @@ if __name__ == "__main__":
         )
 
     print("推理页面已开启!")
-    webbrowser.open(f"http://127.0.0.1:{config.webui_config.port}")
-    app.launch(share=config.webui_config.share, server_port=config.webui_config.port)
+    # webbrowser.open(f"http://10.27.233.131/:{config.webui_config.port}")
+    app.launch(share=True, server_port=8911, server_name="10.27.233.131")

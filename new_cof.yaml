@@ -1,0 +1,15 @@
+API:
+  ernie_client_id: 96BMhQM5simx6R97yDl483Zm
+  ernie_client_secret: 9e05mDOjHoyXD7Sb9GA1l420uaZ6vGMo
+
+MODELS:
+  llm_model:
+    - Ernie
+  embedding_model:
+    - Ernie
+
+block:
+  concurrency_count: 32
+  server_name: "0.0.0.0"
+  server_port: 8916
+  debug: False 

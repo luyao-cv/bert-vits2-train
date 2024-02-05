@@ -1,6 +1,7 @@
 """
 api服务 多版本多模型 fastapi实现
 """
+
 import logging
 import gc
 import random
@@ -98,7 +99,9 @@ class Models:
                 device=device,
                 language=language,
             )
-            logger.success(f"添加模型{model_path}，使用配置文件{os.path.realpath(config_path)}")
+            logger.success(
+                f"添加模型{model_path}，使用配置文件{os.path.realpath(config_path)}"
+            )
         else:
             # 获取一个指向id
             m_id = next(iter(self.path2ids[model_path]))
@@ -368,7 +371,8 @@ if __name__ == "__main__":
         request: Request,
         model_path: str = Query(..., description="添加模型路径"),
         config_path: str = Query(
-            None, description="添加模型配置文件路径，不填则使用./config.json或../config.json"
+            None,
+            description="添加模型配置文件路径，不填则使用./config.json或../config.json",
         ),
         device: str = Query("cuda", description="推理使用设备"),
         language: str = Query("ZH", description="模型默认语言"),
@@ -431,9 +435,11 @@ if __name__ == "__main__":
                 # 对模型文件按步数排序
                 model_files = sorted(
                     model_files,
-                    key=lambda pth: int(pth.lstrip("G_").rstrip(".pth"))
-                    if pth.lstrip("G_").rstrip(".pth").isdigit()
-                    else 10**10,
+                    key=lambda pth: (
+                        int(pth.lstrip("G_").rstrip(".pth"))
+                        if pth.lstrip("G_").rstrip(".pth").isdigit()
+                        else 10**10
+                    ),
                 )
                 result[file] = model_files
                 models_dir = os.path.join(sub_dir, "models")
@@ -450,9 +456,11 @@ if __name__ == "__main__":
                     # 对模型文件按步数排序
                     model_files = sorted(
                         model_files,
-                        key=lambda pth: int(pth.lstrip("models/G_").rstrip(".pth"))
-                        if pth.lstrip("models/G_").rstrip(".pth").isdigit()
-                        else 10**10,
+                        key=lambda pth: (
+                            int(pth.lstrip("models/G_").rstrip(".pth"))
+                            if pth.lstrip("models/G_").rstrip(".pth").isdigit()
+                            else 10**10
+                        ),
                     )
                     result[file] += model_files
                 if len(result[file]) == 0:

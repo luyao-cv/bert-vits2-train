@@ -1,4 +1,4 @@
-import os 
+import os
 import soundfile
 import gradio as gr
 import json
@@ -10,6 +10,7 @@ os.chdir(script_path)
 import time
 import json
 import utils
+
 # flake8: noqa: E402
 import os
 import logging
@@ -45,6 +46,7 @@ version = hps.version if hasattr(hps, "version") else latest_version
 net_g = get_net_g(
     model_path=config.webui_config.model, version=version, device=device, hps=hps
 )
+
 
 def generate_audio(
     slices,
@@ -84,34 +86,33 @@ def generate_audio(
     return audio_list
 
 
-def tts_fn(speaker,text,sdp,noise,noisew,length):
-    
+def tts_fn(speaker, text, sdp, noise, noisew, length):
+
     audio_list = []
-    
-    
+
     length = (100 - length) / 100
     print(text)
-    split_text = [text[i: i + 500] for i in range(0, len(text), 500)]
+    split_text = [text[i : i + 500] for i in range(0, len(text), 500)]
 
     # for i in range(len(split_text)):
     #     if len(split_text[i]) > 500:
-    #         split_text.append(split_text[i][-1:])     
+    #         split_text.append(split_text[i][-1:])
     for text in split_text:
         audio_list.extend(
             generate_audio(
-                text.split("|"
-                ),
+                text.split("|"),
                 sdp,
                 noise,
                 noisew,
                 length,
                 speaker,
-                language='ZH',
+                language="ZH",
             )
         )
-        
+
     audio_concat = np.concatenate(audio_list)
     return (hps.data.sampling_rate, audio_concat)
+
 
 sdp_ratio = 0.2
 noise_scale = 0.6
@@ -133,24 +134,28 @@ _text = """
 总的来说，迪拜是一个充满活力和魅力的城市，它的经济发展和文化繁荣都为世界所瞩目。
 
 """
-tts_fn(speaker,_text,sdp_ratio,noise_scale,noise_scale_w,length_scale)
+tts_fn(speaker, _text, sdp_ratio, noise_scale, noise_scale_w, length_scale)
 
 app = Flask(__name__)
 
-@app.route('/tts', methods=["POST"])
+
+@app.route("/tts", methods=["POST"])
 def post_tts_results():
     input_json = request.get_json()
-    text = input_json['text']
+    text = input_json["text"]
 
-    sampling_rate, audio_data = tts_fn(speaker,text,sdp_ratio,noise_scale,noise_scale_w,length_scale)
+    sampling_rate, audio_data = tts_fn(
+        speaker, text, sdp_ratio, noise_scale, noise_scale_w, length_scale
+    )
 
-    out_wav_path = io.BytesIO()  
+    out_wav_path = io.BytesIO()
     soundfile.write(out_wav_path, audio_data, sampling_rate, format="wav")
     out_wav_path.seek(0)
 
-    #返回base64格式
-    audio_base64 = base64.b64encode(out_wav_path.read()).decode('utf-8')  
+    # 返回base64格式
+    audio_base64 = base64.b64encode(out_wav_path.read()).decode("utf-8")
     return audio_base64
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8920) 
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8920)

@@ -11,15 +11,16 @@ def get_sr_from_bytes(wav: bytes):
     if len(data) > 44:
         try:
             header_fields = {}
-            header_fields['ChunkID'] = str(data[0:4], 'UTF-8')
-            header_fields['Format'] = str(data[8:12], 'UTF-8')
-            header_fields['Subchunk1ID'] = str(data[12:16], 'UTF-8')
-            if header_fields['ChunkID'] == 'RIFF' and header_fields[
-                    'Format'] == 'WAVE' and header_fields[
-                        'Subchunk1ID'] == 'fmt ':
-                header_fields['SampleRate'] = struct.unpack('<I',
-                                                            data[24:28])[0]
-                sr = header_fields['SampleRate']
+            header_fields["ChunkID"] = str(data[0:4], "UTF-8")
+            header_fields["Format"] = str(data[8:12], "UTF-8")
+            header_fields["Subchunk1ID"] = str(data[12:16], "UTF-8")
+            if (
+                header_fields["ChunkID"] == "RIFF"
+                and header_fields["Format"] == "WAVE"
+                and header_fields["Subchunk1ID"] == "fmt "
+            ):
+                header_fields["SampleRate"] = struct.unpack("<I", data[24:28])[0]
+                sr = header_fields["SampleRate"]
         except Exception:
             # no treatment
             pass
@@ -32,17 +33,18 @@ def wav_to_ndarray(wav_data, target_sr):
     value = wav_data[44:]
     middle_data = np.frombuffer(value, dtype=np.int16)
     middle_data = np.asarray(middle_data)
-    if middle_data.dtype.kind not in 'iu':
+    if middle_data.dtype.kind not in "iu":
         raise TypeError("'middle_data' must be an array of integers")
-    dtype = np.dtype('float32')
-    if dtype.kind != 'f':
+    dtype = np.dtype("float32")
+    if dtype.kind != "f":
         raise TypeError("'dtype' must be a floating point type")
 
     i = np.iinfo(middle_data.dtype)
-    abs_max = 2**(i.bits - 1)
+    abs_max = 2 ** (i.bits - 1)
     offset = i.min + abs_max
-    waveform = np.frombuffer((middle_data.astype(dtype) - offset) / abs_max,
-                             dtype=np.float32)
+    waveform = np.frombuffer(
+        (middle_data.astype(dtype) - offset) / abs_max, dtype=np.float32
+    )
     audio_sr = get_sr_from_bytes(wav_data)
 
     waveform = ndarray_resample(waveform, audio_sr, target_sr)
@@ -70,19 +72,20 @@ def ndarray_to_wav(ndarray, sr, target_sr):
     else:
         raise TypeError("'dtype' must be int16 int32 float32 type")
 
-    if ndarray_i16 is not None and ndarray_i16.dtype.kind not in 'iu':
+    if ndarray_i16 is not None and ndarray_i16.dtype.kind not in "iu":
         raise TypeError("'middle_data' must be an array of integers")
-    dtype = np.dtype('float32')
-    if dtype.kind != 'f':
+    dtype = np.dtype("float32")
+    if dtype.kind != "f":
         raise TypeError("'dtype' must be a floating point type")
 
     if ndarray_i16 is not None:
         # ndarray:int16 to float32
         i = np.iinfo(ndarray_i16.dtype)
-        abs_max = 2**(i.bits - 1)
+        abs_max = 2 ** (i.bits - 1)
         offset = i.min + abs_max
-        ndarray_f32 = np.frombuffer((ndarray_i16.astype(dtype) - offset) / abs_max,
-                                    dtype=np.float32)
+        ndarray_f32 = np.frombuffer(
+            (ndarray_i16.astype(dtype) - offset) / abs_max, dtype=np.float32
+        )
 
     if ndarray_f32 is None:
         raise TypeError("invalid 'ndarray_f32'")
@@ -91,9 +94,9 @@ def ndarray_to_wav(ndarray, sr, target_sr):
     return ndarray_pcm_to_wav(target_sr, data)
 
 
-def ndarray_resample(audio_in: np.ndarray,
-                     fs_in: int = 16000,
-                     fs_out: int = 16000) -> np.ndarray:
+def ndarray_resample(
+    audio_in: np.ndarray, fs_in: int = 16000, fs_out: int = 16000
+) -> np.ndarray:
     audio_out = audio_in
     if fs_in != fs_out:
         audio_out = librosa.resample(audio_in, orig_sr=fs_in, target_sr=fs_out)

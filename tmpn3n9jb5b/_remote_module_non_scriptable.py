@@ -40,10 +40,13 @@ _generated_methods = [
 ]
 
 
-
-
 def _remote_forward(
-    module_rref: RRef[module_interface_cls], device: str, is_device_map_set: bool, *args, **kwargs):
+    module_rref: RRef[module_interface_cls],
+    device: str,
+    is_device_map_set: bool,
+    *args,
+    **kwargs
+):
     module = module_rref.local_value()
     device = torch.device(device)
 

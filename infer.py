@@ -8,6 +8,7 @@
     1.1.1-dev： dev开发
     2.0：当前版本
 """
+
 import torch
 import commons
 from text import cleaned_text_to_sequence, get_bert

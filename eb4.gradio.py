@@ -1,4 +1,5 @@
-import os 
+import os
+
 # try:
 #     import soundfile
 # except:
@@ -9,6 +10,7 @@ import json
 import requests as req
 import soundfile as sf
 from pathlib import Path
+
 script_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_path)
 print(script_path)
@@ -31,7 +33,6 @@ import json
 import requests as req
 import soundfile as sf
 from IPython.display import Audio
-
 
 
 xxx = """
@@ -60,39 +61,57 @@ xxx = """
 api = "https://ttsms.ai-lab.top"
 spklist = "https://tirs.ai-lab.top"
 token = "e51b77ca20bfe20ea0f631b2f68a0c8b"
-def infer(speaker,chatbot,sdp,noise,noisew,length):
+
+
+def infer(speaker, chatbot, sdp, noise, noisew, length):
 
     text = chatbot[-1][1]
-        
+
     speed = (100 - length) / 100
-    headers = {'Content-Type': 'application/json'}
-    infer_info = {'token': token,'speaker': speaker,'text': text,'sdp_ratio': sdp,'noise': noise,'noisew': noisew,'length': speed}
+    headers = {"Content-Type": "application/json"}
+    infer_info = {
+        "token": token,
+        "speaker": speaker,
+        "text": text,
+        "sdp_ratio": sdp,
+        "noise": noise,
+        "noisew": noisew,
+        "length": speed,
+    }
     resp = req.post(url=api, headers=headers, data=json.dumps(infer_info))
     data = json.loads(resp.text)
-    os.system("wget -O temp.wav "+data["audio"]+"")
+    os.system("wget -O temp.wav " + data["audio"] + "")
 
-    data["message"] = data["message"].replace("\\n","\n").split("\n")[3:]
+    data["message"] = data["message"].replace("\\n", "\n").split("\n")[3:]
 
-    return 'temp.wav'
+    return "temp.wav"
 
-def g_bot(speaker, chatbot=None, history_state = ConversationBufferMemory(),temperature = None,llm_model=None):
-    prompt = xxx.format(speaker)                
+
+def g_bot(
+    speaker,
+    chatbot=None,
+    history_state=ConversationBufferMemory(),
+    temperature=None,
+    llm_model=None,
+):
+    prompt = xxx.format(speaker)
     try:
         if llm_model is None:
             llm_model = init_model(temperature)
-        output = init_base_chain(llm_model,history=history_state,user_question=prompt)
+        output = init_base_chain(llm_model, history=history_state, user_question=prompt)
     except Exception as e:
         raise e
-        
-    chatbot = [[None, output.split("你的开场白为：")[1].split('\n')[0]]]
-    
+
+    chatbot = [[None, output.split("你的开场白为：")[1].split("\n")[0]]]
+
     return chatbot, output
-  
+
 
 def get_spk(spklist):
     resp = req.get(url=f"{spklist}/spklist/spks.json")
     data = json.loads(resp.text)
     return data
+
 
 def search_speaker(search_value):
     for s in speakers:
@@ -102,65 +121,91 @@ def search_speaker(search_value):
         if search_value in s:
             return s
 
+
 ###llm
 with open("new_cof.yaml", "r", encoding="utf-8") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 ernie_client_id = config["API"]["ernie_client_id"]
-ernie_client_secret = config["API"]["ernie_client_secret"] 
+ernie_client_secret = config["API"]["ernie_client_secret"]
 
 
 def init_model(temperature):
 
     llm_model = ErnieBotChat(
-                ernie_client_id = ernie_client_id,
-                ernie_client_secret = ernie_client_secret,
-                model_name='ERNIE-Bot-4',
-                temperature=temperature,
-                top_p=0.4
-                )
+        ernie_client_id=ernie_client_id,
+        ernie_client_secret=ernie_client_secret,
+        model_name="ERNIE-Bot-4",
+        temperature=temperature,
+        top_p=0.4,
+    )
     return llm_model
 
-def init_base_chain(llm_model,history,user_question=None):
-    chain = ConversationChain(llm=llm_model,
-                              verbose=True,
-                              memory=history,
-                              )
+
+def init_base_chain(llm_model, history, user_question=None):
+    chain = ConversationChain(
+        llm=llm_model,
+        verbose=True,
+        memory=history,
+    )
     try:
         output = chain.run(user_question)
     except Exception as e:
         raise e
-    return output 
+    return output
 
 
 ###gradio
-block = gr.Blocks(css="footer {visibility: hidden}",title="角色扮演对话")
+block = gr.Blocks(css="footer {visibility: hidden}", title="角色扮演对话")
 with block:
     speakers = get_spk(spklist)
-    history = ConversationBufferMemory() #历史记录
-    history_state = gr.State(history) #历史记录的状态
-    llm_model_state = gr.State() #llm模型的状态
-    trash = gr.State() #垃圾桶
+    history = ConversationBufferMemory()  # 历史记录
+    history_state = gr.State(history)  # 历史记录的状态
+    llm_model_state = gr.State()  # llm模型的状态
+    trash = gr.State()  # 垃圾桶
     with gr.Row():
-        #设置行
+        # 设置行
 
         with gr.Column(scale=1):
             with gr.Accordion("模型配置", open=True):
                 with gr.Row():
-                    speaker = gr.Dropdown(choices=speakers, value=speakers[0], label="角色")
+                    speaker = gr.Dropdown(
+                        choices=speakers, value=speakers[0], label="角色"
+                    )
                     search = gr.Textbox(label="搜索角色", lines=1)
                     with gr.Row():
                         btn2 = gr.Button(value="搜索")
                         btn_ensure = gr.Button(value="生成")
-                    
-                    text = gr.TextArea(label="角色背景", placeholder="选择角色，AI生成角色背景......", lines=10, interactive=True)
-                    
+
+                    text = gr.TextArea(
+                        label="角色背景",
+                        placeholder="选择角色，AI生成角色背景......",
+                        lines=10,
+                        interactive=True,
+                    )
+
                 with gr.Column():
                     with gr.Row():
-                        sdp_ratio = gr.Slider(minimum=0, maximum=1, value=0.2, step=0.1, label="SDP/DP 混合比")
-                        noise_scale = gr.Slider(minimum=0.1, maximum=2, value=0.6, step=0.1, label="感情")
+                        sdp_ratio = gr.Slider(
+                            minimum=0,
+                            maximum=1,
+                            value=0.2,
+                            step=0.1,
+                            label="SDP/DP 混合比",
+                        )
+                        noise_scale = gr.Slider(
+                            minimum=0.1, maximum=2, value=0.6, step=0.1, label="感情"
+                        )
                     with gr.Row():
-                        noise_scale_w = gr.Slider(minimum=0.1, maximum=2, value=0.8, step=0.1, label="音素长度")
-                        length_scale = gr.Slider(minimum=-99, maximum=99, value=0, step=0.1, label="语速(%)")
+                        noise_scale_w = gr.Slider(
+                            minimum=0.1,
+                            maximum=2,
+                            value=0.8,
+                            step=0.1,
+                            label="音素长度",
+                        )
+                        length_scale = gr.Slider(
+                            minimum=-99, maximum=99, value=0, step=0.1, label="语速(%)"
+                        )
                 temperature = gr.Slider(
                     minimum=0.0,
                     maximum=1.0,
@@ -169,10 +214,9 @@ with block:
                     label="temperature",
                     interactive=True,
                 )
-                
-                
+
         with gr.Column(scale=4):
-            chatbot = gr.Chatbot(label="聊天对话框",lines=80)
+            chatbot = gr.Chatbot(label="聊天对话框", lines=80)
             with gr.Row():
                 message = gr.Textbox(
                     label="在此处填写你想对我说的话",
@@ -183,7 +227,7 @@ with block:
                 audio_output = gr.Audio(label="输出音频")
             with gr.Row():
                 submit = gr.Button("发送", variant="primary")
-                #刷新
+                # 刷新
                 clear = gr.Button("刷新", variant="secondary")
 
             def clear_():
@@ -192,17 +236,22 @@ with block:
                 return "", chatbot, history_state
 
             def user(user_message, history):
-                return "",history + [[user_message, None]]
-            def bot(user_message,
-                    chatbot = None,
-                    history_state = ConversationBufferMemory(),
-                    temperature = None,
-                    llm_model=None):
+                return "", history + [[user_message, None]]
+
+            def bot(
+                user_message,
+                chatbot=None,
+                history_state=ConversationBufferMemory(),
+                temperature=None,
+                llm_model=None,
+            ):
                 try:
                     user_message = chatbot[-1][0]
                     if llm_model is None:
                         llm_model = init_model(temperature)
-                    output = init_base_chain(llm_model,history=history_state,user_question=user_message)
+                    output = init_base_chain(
+                        llm_model, history=history_state, user_question=user_message
+                    )
                 except Exception as e:
                     raise e
                 chatbot[-1][1] = ""
@@ -212,38 +261,45 @@ with block:
                     yield chatbot
                 return chatbot
 
-    
-    
     btn2.click(search_speaker, inputs=[search], outputs=[speaker])
-    
-    btn_ensure.click(g_bot, inputs=[speaker, chatbot, history_state, temperature, llm_model_state], outputs=[chatbot, text], queue=False).then(
-        infer, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
+
+    btn_ensure.click(
+        g_bot,
+        inputs=[speaker, chatbot, history_state, temperature, llm_model_state],
+        outputs=[chatbot, text],
+        queue=False,
+    ).then(
+        infer,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
     )
-    
-    #刷新按钮
+
+    # 刷新按钮
     clear.click(clear_, inputs=[], outputs=[message, chatbot, history_state])
-    #send按钮
-    submit.click(user, [message, chatbot], [message,chatbot], queue=False).then(
-        bot, [message,chatbot,history_state,temperature,llm_model_state], [chatbot]
+    # send按钮
+    submit.click(user, [message, chatbot], [message, chatbot], queue=False).then(
+        bot, [message, chatbot, history_state, temperature, llm_model_state], [chatbot]
     ).then(
-        infer, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
+        infer,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
     )
-    #回车
-    message.submit(user, [message, chatbot], [message,chatbot], queue=False).then(
-        bot, [message,chatbot,history_state,temperature,llm_model_state], [chatbot]
+    # 回车
+    message.submit(user, [message, chatbot], [message, chatbot], queue=False).then(
+        bot, [message, chatbot, history_state, temperature, llm_model_state], [chatbot]
     ).then(
-        infer, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
+        infer,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
     )
 
 
 # 启动参数
-block.queue(concurrency_count=config['block']['concurrency_count']).launch(
-    debug=config['block']['debug'],
+block.queue(concurrency_count=config["block"]["concurrency_count"]).launch(
+    debug=config["block"]["debug"],
     # server_name=config['block']['server_name'],
     # server_port=config['block']['server_port'],
-    server_name = "0.0.0.0",
+    server_name="0.0.0.0",
     server_port=8001,
     share=True,
-  
-) 
-
+)

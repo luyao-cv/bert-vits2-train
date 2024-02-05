@@ -17,6 +17,7 @@ os.chdir(script_path)
 preprocess_text_config = config.preprocess_text_config
 print(config.preprocess_text_config.transcription_path)
 
+
 @click.command()
 @click.option(
     "--transcription-path",
@@ -35,7 +36,6 @@ print(config.preprocess_text_config.transcription_path)
 @click.option("--max-val-total", default=preprocess_text_config.max_val_total)
 @click.option("--clean/--no-clean", default=preprocess_text_config.clean)
 @click.option("-y", "--yml_config")
-
 def preprocess(
     transcription_path: str,
     cleaned_path: Optional[str],
@@ -145,22 +145,28 @@ def gen_filelist_process(cur_data_path):
 
     path_file = f"./Data/filelists/"
     out_file = f"./Data/filelists/full.txt"
-    person = cur_data_path.split('/')[-1]   
-    with open(out_file, 'w', encoding="Utf-8") as wf:        
-        with open(os.path.join(path_file, "sample.list"), 'r', encoding="utf-8") as perFile:
+    person = cur_data_path.split("/")[-1]
+    with open(out_file, "w", encoding="Utf-8") as wf:
+        with open(
+            os.path.join(path_file, "sample.list"), "r", encoding="utf-8"
+        ) as perFile:
             path = f"{cur_data_path}"
             files = os.listdir(path)
-            files = sorted(files, key=lambda x: int(x.split('.')[0]))
-            pattern = re.compile(r'\d+')
-            result_list = [int(pattern.search(file_name).group()) for file_name in files]
+            files = sorted(files, key=lambda x: int(x.split(".")[0]))
+            pattern = re.compile(r"\d+")
+            result_list = [
+                int(pattern.search(file_name).group()) for file_name in files
+            ]
             for i in range(20):
-                line = perFile.readline() 
+                line = perFile.readline()
                 if i in result_list:
                     line = line.split("|")
-                    result = f"{cur_data_path}/{str(i)}.wav|{person}|{line[-2]}|{line[-1]}"
-                    wf.write(f"{result}")  
+                    result = (
+                        f"{cur_data_path}/{str(i)}.wav|{person}|{line[-2]}|{line[-1]}"
+                    )
+                    wf.write(f"{result}")
+
 
 if __name__ == "__main__":
     # gen_filelist_process('Data/luyao_vocal') # 生成文件列表
-    preprocess() # 生成训练集和验证集
-    
+    preprocess()  # 生成训练集和验证集

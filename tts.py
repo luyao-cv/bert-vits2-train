@@ -15,7 +15,7 @@ API_URL = "https://u5z1sbm484l9ec07.aistudio-hub.baidu.com"
 headers = {
     # 请前往 https://aistudio.baidu.com/index/accessToken 查看 访问令牌 并替换
     "Authorization": "token 4ce50e3378f418d271c480c8ddfa818537071dbe",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
 }
 text = """
 迪拜是阿拉伯联合酋长国人口最多的城市，也是该国七个酋长国之一迪拜酋长国的首府。它位于中东地区的中央，面向波斯湾，是一片平坦的沙漠之地。面积约为4114平方公里，占阿联酋全国总面积的5.8%，继阿布扎比之后排名第二。人口约为3,392,408人（2020年6月），约占阿联酋全国人口的41.9%，为人口最多的城市。
@@ -40,16 +40,14 @@ text = """
 
 
 """
-input_json = {
-    "text":text
-}
+input_json = {"text": text}
 # 请求服务 访问AI Studio部署API服务
-results = requests.post(API_URL+"/tts", headers=headers, json=input_json)
+results = requests.post(API_URL + "/tts", headers=headers, json=input_json)
 print(results)
 # 请求本地服务 访问AI Studio部署API服务
 # results = requests.post("http://10.21.226.179:8920/tts", json=input_json)
 
-audio_base64 = results.content  
+audio_base64 = results.content
 # 解码 Base64 data
 audio_data = base64.b64decode(audio_base64)
 

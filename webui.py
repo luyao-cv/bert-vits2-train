@@ -375,7 +375,9 @@ if __name__ == "__main__":
                     minimum=0.1, maximum=2, value=1.0, step=0.1, label="语速"
                 )
                 language = gr.Dropdown(
-                    choices=languages, value=languages[0], label="选择语言(新增mix混合选项)"
+                    choices=languages,
+                    value=languages[0],
+                    label="选择语言(新增mix混合选项)",
                 )
                 btn = gr.Button("生成音频！", variant="primary")
             with gr.Column():

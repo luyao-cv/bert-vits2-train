@@ -1,6 +1,7 @@
 import re
 import os
 
+
 def rename_lab_files(directory):
     # 遍历指定目录下的所有文件
     for filename in os.listdir(directory):
@@ -20,6 +21,7 @@ def rename_lab_files(directory):
                 new_path = os.path.join(directory, new_filename)
                 os.rename(old_path, new_path)
                 print(f"重命名文件: {filename} -> {new_filename}")
+
 
 # 指定包含.lab文件的目录路径
 directory_path = "/home/luyao/project/Bert-VITS2/raw/luyao_02"

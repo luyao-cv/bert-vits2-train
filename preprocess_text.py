@@ -12,6 +12,7 @@ from infer import latest_version
 
 preprocess_text_config = config.preprocess_text_config
 
+
 @click.command()
 @click.option(
     "--transcription-path",

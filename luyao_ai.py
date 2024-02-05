@@ -1,4 +1,5 @@
-import os 
+import os
+
 # try:
 #     import soundfile
 # except:
@@ -19,6 +20,7 @@ import time
 import json
 import requests as req
 import utils
+
 # flake8: noqa: E402
 import os
 import logging
@@ -49,14 +51,18 @@ if device == "mps":
 
 import re
 
+
 def separate_chinese_english(text):
     # Use regular expression to find patterns where Chinese characters meet English letters
     # and insert a '|' between them
     # \u4e00-\u9fff is the unicode range for Chinese characters
     # [a-zA-Z] is for English letters
     # text = text.replace(" ", "")
-    return re.sub(r'([\u4e00-\u9fff])(\s*[a-zA-Z])', r'\1|\2', re.sub(r'([a-zA-Z]\s*)([\u4e00-\u9fff])', r'\1|\2', text))
-
+    return re.sub(
+        r"([\u4e00-\u9fff])(\s*[a-zA-Z])",
+        r"\1|\2",
+        re.sub(r"([a-zA-Z]\s*)([\u4e00-\u9fff])", r"\1|\2", text),
+    )
 
 
 xxx = """
@@ -148,7 +154,6 @@ def generate_audio_multilang(
     return audio_list
 
 
-
 def generate_audio(
     slices,
     sdp_ratio,
@@ -186,17 +191,17 @@ def generate_audio(
     return audio_list
 
 
-def tts_fn(speaker,chatbot,sdp,noise,noisew,length):
+def tts_fn(speaker, chatbot, sdp, noise, noisew, length):
     text = chatbot[-1][1]
     audio_list = []
 
-    
     length = (100 - length) / 100
 
-    language='auto'
+    language = "auto"
     print(text)
     print(separate_chinese_english(text).split("|"))
     import pdb
+
     pdb.set_trace()
     if language.lower() == "auto":
         for idx, slice in enumerate(separate_chinese_english(text).split("|")):
@@ -256,27 +261,35 @@ def tts_fn(speaker,chatbot,sdp,noise,noisew,length):
                 language=language,
             )
         )
-        
+
     audio_concat = np.concatenate(audio_list)
     return (hps.data.sampling_rate, audio_concat)
 
-def g_bot(speaker, chatbot=None, history_state = ConversationBufferMemory(),temperature = None,llm_model=None):
-    prompt = xxx.format(Character_Background)               
+
+def g_bot(
+    speaker,
+    chatbot=None,
+    history_state=ConversationBufferMemory(),
+    temperature=None,
+    llm_model=None,
+):
+    prompt = xxx.format(Character_Background)
     try:
         if llm_model is None:
             llm_model = init_model(temperature)
-        output = init_base_chain(llm_model,history=history_state,user_question=prompt)
+        output = init_base_chain(llm_model, history=history_state, user_question=prompt)
     except Exception as e:
         raise e
     chatbot = [[None, output]]
 
     return chatbot, prompt + output
-  
+
 
 def get_spk(spklist):
     resp = req.get(url=f"{spklist}/spklist/spks.json")
     data = json.loads(resp.text)
     return data
+
 
 def search_speaker(search_value):
     for s in speakers:
@@ -286,6 +299,7 @@ def search_speaker(search_value):
         if search_value in s:
             return s
 
+
 ###llm
 ernie_client_id = "96BMhQM5simx6R97yDl483Zm"
 ernie_client_secret = "9e05mDOjHoyXD7Sb9GA1l420uaZ6vGMo"
@@ -294,72 +308,99 @@ ernie_client_secret = "9e05mDOjHoyXD7Sb9GA1l420uaZ6vGMo"
 def init_model(temperature):
 
     llm_model = ErnieBotChat(
-                ernie_client_id = ernie_client_id,
-                ernie_client_secret = ernie_client_secret,
-                model_name='ERNIE-Bot-4',
-                temperature=temperature,
-                top_p=0.4
-                )
+        ernie_client_id=ernie_client_id,
+        ernie_client_secret=ernie_client_secret,
+        model_name="ERNIE-Bot-4",
+        temperature=temperature,
+        top_p=0.4,
+    )
     return llm_model
 
-def init_base_chain(llm_model,history,user_question=None):
-    chain = ConversationChain(llm=llm_model,
-                              verbose=True,
-                              memory=history,
-                              )
+
+def init_base_chain(llm_model, history, user_question=None):
+    chain = ConversationChain(
+        llm=llm_model,
+        verbose=True,
+        memory=history,
+    )
     try:
         output = chain.run(user_question)
     except Exception as e:
         raise e
-    return output 
+    return output
 
 
 ###gradio
-block = gr.Blocks(css="footer {visibility: hidden}",title="飞桨小鹿")
+block = gr.Blocks(css="footer {visibility: hidden}", title="飞桨小鹿")
 hps = utils.get_hparams_from_file(config.webui_config.config_path)
 version = hps.version if hasattr(hps, "version") else latest_version
 net_g = get_net_g(
     model_path=config.webui_config.model, version=version, device=device, hps=hps
 )
 with block:
-    gr.HTML("<center>"
-            "<h1>💕🎤 「小鹿AI助手」 X 飞桨的语音小助手 </h1>"
-            "</center>")
+    gr.HTML("<center>" "<h1>💕🎤 「小鹿AI助手」 X 飞桨的语音小助手 </h1>" "</center>")
     gr.Markdown("## <center>⚡ 快速体验版，逼真的角色声音，让你沉浸其中。</center>")
-    gr.Markdown("### <center>如果未点击“开启对话”按钮，将会进入普通机器人小助手对话模式。首次对话需要总时间10-20s，后续聊天基本2-5以及实时生成语音。😊🎭</center>")
-    gr.Markdown("### <center>💗🧑‍🎓“小鹿AI助手”是一款专为深度学习技术用户设计的智能答疑工具，专注于解答关于PaddleMIX跨模态大模型全流程开发工具的问题。她具备丰富的深度学习技术知识和实践经验。快来体验“小鹿AI助手”，让您的深度学习之旅更加顺畅和高效！🌹🌹❤️</center>")
-    
-                
+    gr.Markdown(
+        "### <center>如果未点击“开启对话”按钮，将会进入普通机器人小助手对话模式。首次对话需要总时间10-20s，后续聊天基本2-5以及实时生成语音。😊🎭</center>"
+    )
+    gr.Markdown(
+        "### <center>💗🧑‍🎓“小鹿AI助手”是一款专为深度学习技术用户设计的智能答疑工具，专注于解答关于PaddleMIX跨模态大模型全流程开发工具的问题。她具备丰富的深度学习技术知识和实践经验。快来体验“小鹿AI助手”，让您的深度学习之旅更加顺畅和高效！🌹🌹❤️</center>"
+    )
+
     speaker_ids = hps.data.spk2id
     speakers = list(speaker_ids.keys())
-    history = ConversationBufferMemory() #历史记录
-    history_state = gr.State(history) #历史记录的状态
-    llm_model_state = gr.State() #llm模型的状态
-    trash = gr.State() #垃圾桶
+    history = ConversationBufferMemory()  # 历史记录
+    history_state = gr.State(history)  # 历史记录的状态
+    llm_model_state = gr.State()  # llm模型的状态
+    trash = gr.State()  # 垃圾桶
     with gr.Row():
-        #设置行
+        # 设置行
 
         with gr.Column(scale=1.8):
             with gr.Accordion("🎙️ 快来点击我开启对话吧 💬", open=True):
                 btn_ensure = gr.Button(value="🚀开启对话🚀", variant="primary")
             with gr.Accordion("模型配置", open=True):
                 with gr.Row():
-                    speaker = gr.Dropdown(choices=speakers, value=speakers[0], label="角色" ,visible=False)
-                    search = gr.Textbox(label="搜索角色", lines=1,visible=False)
+                    speaker = gr.Dropdown(
+                        choices=speakers, value=speakers[0], label="角色", visible=False
+                    )
+                    search = gr.Textbox(label="搜索角色", lines=1, visible=False)
                     with gr.Column():
                         with gr.Row():
                             # btn_ensure = gr.Button(value="生成")
-                            btn2 = gr.Button(value="搜索",visible=False)
+                            btn2 = gr.Button(value="搜索", visible=False)
                         with gr.Row():
-                            text = gr.TextArea(label="角色背景", placeholder="选择角色，AI生成角色背景......", lines=10, interactive=True,visible=False)
-                        
+                            text = gr.TextArea(
+                                label="角色背景",
+                                placeholder="选择角色，AI生成角色背景......",
+                                lines=10,
+                                interactive=True,
+                                visible=False,
+                            )
+
                 with gr.Column():
                     with gr.Row():
-                        sdp_ratio = gr.Slider(minimum=0, maximum=1, value=0.2, step=0.1, label="SDP/DP 混合比")
-                        noise_scale = gr.Slider(minimum=0.1, maximum=2, value=0.6, step=0.1, label="感情")
+                        sdp_ratio = gr.Slider(
+                            minimum=0,
+                            maximum=1,
+                            value=0.2,
+                            step=0.1,
+                            label="SDP/DP 混合比",
+                        )
+                        noise_scale = gr.Slider(
+                            minimum=0.1, maximum=2, value=0.6, step=0.1, label="感情"
+                        )
                     with gr.Row():
-                        noise_scale_w = gr.Slider(minimum=0.1, maximum=2, value=0.8, step=0.1, label="音素长度")
-                        length_scale = gr.Slider(minimum=-99, maximum=99, value=15, step=0.1, label="语速(%)")
+                        noise_scale_w = gr.Slider(
+                            minimum=0.1,
+                            maximum=2,
+                            value=0.8,
+                            step=0.1,
+                            label="音素长度",
+                        )
+                        length_scale = gr.Slider(
+                            minimum=-99, maximum=99, value=15, step=0.1, label="语速(%)"
+                        )
                 temperature = gr.Slider(
                     minimum=0.0,
                     maximum=1.0,
@@ -368,10 +409,10 @@ with block:
                     label="temperature",
                     interactive=True,
                 )
-        
+
         with gr.Column(scale=4):
 
-            chatbot = gr.Chatbot(label="聊天对话框",lines=80)
+            chatbot = gr.Chatbot(label="聊天对话框", lines=80)
             with gr.Row():
                 message = gr.Textbox(
                     label="在此处填写你想对我说的话",
@@ -382,7 +423,7 @@ with block:
                 audio_output = gr.Audio(label="小鹿说......", autoplay="True")
             with gr.Row():
                 submit = gr.Button("发送", variant="primary")
-                #刷新
+                # 刷新
                 clear = gr.Button("清除", variant="secondary")
 
             def clear_():
@@ -391,17 +432,22 @@ with block:
                 return "", chatbot, history_state, "已清除成功，新建对话完成！"
 
             def user(user_message, history):
-                return "",history + [[user_message, None]]
-            def bot(user_message,
-                    chatbot = None,
-                    history_state = ConversationBufferMemory(),
-                    temperature = None,
-                    llm_model=None):
+                return "", history + [[user_message, None]]
+
+            def bot(
+                user_message,
+                chatbot=None,
+                history_state=ConversationBufferMemory(),
+                temperature=None,
+                llm_model=None,
+            ):
                 try:
                     user_message = chatbot[-1][0]
                     if llm_model is None:
                         llm_model = init_model(temperature)
-                    output = init_base_chain(llm_model,history=history_state,user_question=user_message)
+                    output = init_base_chain(
+                        llm_model, history=history_state, user_question=user_message
+                    )
                 except Exception as e:
                     raise e
                 chatbot[-1][1] = ""
@@ -411,33 +457,38 @@ with block:
                     yield chatbot
                 return chatbot
 
-    
-    
     btn2.click(search_speaker, inputs=[search], outputs=[speaker])
-    
-    btn_ensure.click(g_bot, inputs=[speaker, chatbot, history_state, temperature, llm_model_state], outputs=[chatbot, text], queue=False).then(
-        tts_fn, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
-    )
-    
-    
-    #回车
-    message.submit(user, [message, chatbot], [message,chatbot], queue=False).then(
-        bot, [message,chatbot,history_state,temperature,llm_model_state], [chatbot]
+
+    btn_ensure.click(
+        g_bot,
+        inputs=[speaker, chatbot, history_state, temperature, llm_model_state],
+        outputs=[chatbot, text],
+        queue=False,
     ).then(
-        tts_fn, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
+        tts_fn,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
     )
-    #刷新按钮
+
+    # 回车
+    message.submit(user, [message, chatbot], [message, chatbot], queue=False).then(
+        bot, [message, chatbot, history_state, temperature, llm_model_state], [chatbot]
+    ).then(
+        tts_fn,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
+    )
+    # 刷新按钮
     clear.click(clear_, inputs=[], outputs=[message, chatbot, history_state, text])
-    #send按钮
-    submit.click(user, [message, chatbot], [message,chatbot], queue=False).then(
-        bot, [message,chatbot,history_state,temperature,llm_model_state], [chatbot]
+    # send按钮
+    submit.click(user, [message, chatbot], [message, chatbot], queue=False).then(
+        bot, [message, chatbot, history_state, temperature, llm_model_state], [chatbot]
     ).then(
-        tts_fn, inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale], outputs=[audio_output]
+        tts_fn,
+        inputs=[speaker, chatbot, sdp_ratio, noise_scale, noise_scale_w, length_scale],
+        outputs=[audio_output],
     )
     # gr.Markdown("### <right>更多精彩音频应用，正在持续更新～联系作者：luyao15@baidu.com 💕</right>")
-
-    
-
 
 
 # 启动参数
@@ -445,9 +496,7 @@ block.queue(concurrency_count=32).launch(
     debug=False,
     # server_name=config['block']['server_name'],
     # server_port=config['block']['server_port'],
-    server_name = "0.0.0.0",
-    server_port = 8909,
+    server_name="0.0.0.0",
+    server_port=8909,
     share=True,
-  
-) 
-
+)
